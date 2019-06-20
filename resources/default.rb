@@ -60,9 +60,15 @@ action :install do
   directory new_resource.install_dir do
     recursive true
   end
+  
+  if new_resource.version >= "3.5.5"
+    archive_prefix = "apache-zookeeper-"
+  else
+    archive_prefix = "zookeeper-"
+  end
 
   ark 'zookeeper' do
-    url         "#{new_resource.mirror}/zookeeper-#{new_resource.version}/zookeeper-#{new_resource.version}.tar.gz"
+    url         "#{new_resource.mirror}/zookeeper-#{new_resource.version}/#{archive-prefix}-#{new_resource.version}.tar.gz"
     version     new_resource.version
     prefix_root new_resource.install_dir
     prefix_home new_resource.install_dir

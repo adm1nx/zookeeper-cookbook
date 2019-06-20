@@ -20,6 +20,7 @@ default['zookeeper']['service_style'] = 'runit'
 
 default['zookeeper']['config'] = {
   'clientPort' => 2181,
+  'securePort' => 2182,
   'dataDir'    => '/var/lib/zookeeper',
   'tickTime'   => 2000,
   'initLimit'  => 5,
