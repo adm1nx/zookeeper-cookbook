@@ -68,7 +68,7 @@ action :install do
   end
 
   ark 'zookeeper' do
-    url         "#{new_resource.mirror}/zookeeper-#{new_resource.version}/#{archive-prefix}-#{new_resource.version}.tar.gz"
+    url         "#{new_resource.mirror}/zookeeper-#{new_resource.version}/#{archive_prefix}-#{new_resource.version}.tar.gz"
     version     new_resource.version
     prefix_root new_resource.install_dir
     prefix_home new_resource.install_dir
