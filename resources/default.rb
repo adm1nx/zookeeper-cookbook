@@ -62,10 +62,10 @@ action :install do
   end
   
   if new_resource.version >= "3.5.5"
-    archive_prefix = "apache-zookeeper-"
+    archive_prefix = "apache-zookeeper"
     archive_suffix = "-bin"
   else
-    archive_prefix = "zookeeper-"
+    archive_prefix = "zookeeper"
     archive_suffix = ""
   end
 
